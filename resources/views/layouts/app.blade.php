@@ -72,6 +72,9 @@
                                 <li>
                                     <a href="{{ url('/admin/pedidos') }}">Gestionar pedidos</a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('report.index') }}">Generar Reportes</a>
+                                </li>
                                 @endif
                                 <li>
                                     <a href="{{ route('logout') }}"

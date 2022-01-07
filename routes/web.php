@@ -40,4 +40,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')
 
 	Route::get('/pedidos', 'PedidoController@index')->name('pedidos.index'); //
 	Route::put('/pedidos/{pedido}', 'PedidoController@update')->name('pedidos.update'); //
+
+	// Generar Reportes
+	Route::get('/reportes', 'Reports\ReportController@index')->name('report.index');
+	Route::get('/reportes-mes', 'Reports\ReportController@export')->name('report');
 });
