@@ -13,7 +13,7 @@ class SearchController extends Controller
     	$products = Product::where('name', 'like', "%$query%")->paginate(5);
     	
     	if ($products->count() == 1) {
-    		$id = $products->first()->id;
+    		$id = $products->first()->slug;
     		return redirect("products/$id"); // 'products/'.$id
     	}
 

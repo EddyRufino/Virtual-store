@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url('/') }}">Restaurante Virtual</a>
+                <a class="navbar-brand" href="{{ url('/') }}">Bodega Virtual</a>
             </div>
 
             <div class="collapse navbar-collapse" id="navigation-example">
@@ -44,7 +44,11 @@
                         {{-- Lo agrege yo xD --}}
                         @if (auth()->user()->cart->details->count() > 0)
                             <li>
-                                <a href="{{ url('/home') }}">Carrito de compras <span class="badge badge-secondary mb-2">{{ auth()->user()->cart->details->count() }}</span>
+                                <a href="{{ url('/home') }}">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="badge badge-danger mb-2">
+                                        {{ auth()->user()->cart->details->count() }}
+                                    </span>
                                 </a>
                             </li>
                         @endif

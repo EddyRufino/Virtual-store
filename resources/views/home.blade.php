@@ -14,7 +14,7 @@
 
             @if (session('notification'))
                 <div class="alert alert-success">
-                    {{ session('notification') }}
+                    {!! session('notification') !!}
                 </div>
             @endif
 
@@ -83,7 +83,7 @@
             @if (auth()->user()->cart->details->count())
 
                 <div class="text-center">
-                    <form method="post" action="{{ url('/order') }}">
+                    <form method="post" action="{{ url('/order') }}" id="cart-form">
                         {{ csrf_field() }}
                         
                         <button class="btn btn-primary btn-round">

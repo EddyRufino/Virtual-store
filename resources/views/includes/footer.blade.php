@@ -25,7 +25,7 @@
             {{--</ul>--}}
         </nav>
         <div class="copyright pull-right">
-            &copy; 2020.
+            {{-- &copy; 2022. --}}
         </div>
     </div>
 </footer>

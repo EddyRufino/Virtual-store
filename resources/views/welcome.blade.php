@@ -64,17 +64,17 @@
 @endsection
 
 @section('content')
-<div class="header header-filter" style="background-image: url('{{ asset('/img/city.jpg') }}');">
+<div class="header header-filter" style="background-image: url('{{ asset('/img/fondo.png') }}');">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <img src="{{ asset('/img/logo.png') }}" alt="" width="300">
-                <h1 class="title">Bienvenido a {{ config('app.name') }}.</h1>
+                <h1 class="title">Bienvenido a tu bodega "{{ config('app.name') }}"</h1>
                 <h4>Realiza pedidos en línea y te contactaremos para coordinar la entrega.</h4>
-               {{--  <br />
-                <a href="#" class="btn btn-danger btn-raised btn-lg">
-                    <i class="fa fa-play"></i> ¿Cómo funciona?
-                </a> --}}
+                <br />
+                <a href="https://api.whatsapp.com/send?phone=+51980751862&text= Hola!%20Quiero%20contratar%20sus%20servicios!" class="btn btn-danger btn-raised btn-lg" target="_blank">
+                    <i class="fa fa-whatsapp"></i> ¿Cómo funciona?
+                </a>
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@
                                 <i class="material-icons">verified_user</i>
                             </div>
                             <h4 class="info-title">Pago seguro</h4>
-                            <p>Todo pedido que realices será confirmado a través de una llamada. Si no confías en los pagos en línea puedes pagar contra entrega el valor acordado.</p>
+                            <p>Todo pedido que realices será confirmado a través de una llamada o Whatsapp. Si no confías en los pagos en línea puedes pagar contra entrega el valor acordado.</p>
                         </div>
                     </div>
                     <div class="col-md-4">

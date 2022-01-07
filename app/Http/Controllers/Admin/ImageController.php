@@ -22,7 +22,7 @@ class ImageController extends Controller
     {
     	// guardar la img en nuestro proyecto
     	$file = $request->file('photo');
-    	$path = public_path() . '/images/products';
+    	$path = public_path() . '/images/products'; // './images/products' Para produccion cpanel
 	    $fileName = uniqid() . $file->getClientOriginalName();
     	$moved = $file->move($path, $fileName);
     	

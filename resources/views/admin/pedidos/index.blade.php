@@ -22,12 +22,13 @@
                       <thead>
                           <tr>
                               {{-- <th class="text-center">#</th> --}}
-                              <th class="col-md-2 text-center">Cliente</th>
-                              <th class="col-md-2 text-center">Dirección</th>
+                              <th class="text-center">Cliente</th>
+                              {{-- <th class="text-center">Dirección</th> --}}
                               <th class="text-center">Teléfono</th>
-                              <th class="text-center">Plato</th>
-                              <th class="text-right">Precio</th>
+                              <th class="text-center">Producto</th>
+                              {{-- <th class="text-right">Precio</th> --}}
                               <th class="text-right">Cantidad</th>
+                              <th class="text-right">Cobrar</th>
                               <th class="text-right">Opciones</th>
                           </tr>
                       </thead>
@@ -36,11 +37,12 @@
                           <tr>
                               {{-- <td class="text-center">{{ $pedido->id }}</td> --}}
                               <td>{{ $pedido->user_name }}</td>
-                              <td>{{ $pedido->address }}</td>
+                              {{-- <td>{{ $pedido->address }}</td> --}}
                               <td>{{ $pedido->phone }}</td>
                               <td>{{ $pedido->name }}</td>
-                              <td class="text-right">s/. {{ $pedido->price }}</td>
+                              {{-- <td class="text-right">s/. {{ $pedido->price }}</td> --}}
                               <td class="text-right">{{ $pedido->quantity }}</td>
+                              <td class="text-right">s/. {{ $pedido->price * $pedido->quantity }}</td>
                               <td class="td-actions text-right">
                                   <form method="post" action="{{ route('pedidos.update', $pedido->detail_id) }}">
                                       {{ csrf_field() }}
