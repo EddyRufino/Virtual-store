@@ -94,9 +94,24 @@
                     </form>
                 </div>
             </div>
+
+            <div class="team">
+                <h2 class="title">Gráfico de Pedidos</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        {!! $chart->container() !!}
+
+                        {!! $chart->script() !!}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
 @include('includes.footer')
 @endsection
+
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+@endpush
