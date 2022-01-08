@@ -74,6 +74,9 @@ class PedidoController extends Controller
 
     public function destroy($id)
     {
-        //
+        $pedido = CartDetail::find($id);
+        $pedido->delete();
+
+        return back();
     }
 }

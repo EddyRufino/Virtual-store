@@ -38,8 +38,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')
 	Route::post('/categories/{category}/edit', 'CategoryController@update'); // actualizar
 	Route::delete('/categories/{category}', 'CategoryController@destroy'); // form eliminar
 
-	Route::get('/pedidos', 'PedidoController@index')->name('pedidos.index'); //
-	Route::put('/pedidos/{pedido}', 'PedidoController@update')->name('pedidos.update'); //
+	Route::get('/pedidos', 'PedidoController@index')->name('pedidos.index');
+	Route::put('/pedidos/{pedido}', 'PedidoController@update')->name('pedidos.update');
+	Route::delete('/pedidos/{pedido}', 'PedidoController@destroy')->name('pedidos.destroy');
 
 	// Generar Reportes
 	Route::get('/reportes', 'Reports\ReportController@index')->name('report.index');

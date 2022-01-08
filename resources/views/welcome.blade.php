@@ -6,6 +6,10 @@
 
 @section('styles')
     <style>
+        .row.flex-center {
+            display: flex;
+            justify-content: center;
+        }
         .team .row .col-md-4 {
             margin-bottom: 5em;
         }
@@ -134,7 +138,7 @@
             </form>
 
             <div class="team">
-                <div class="row">
+                <div class="row flex-center">
                     @foreach ($categories as $category)
                     <div class="col-md-4">
                         <div class="team-player">
