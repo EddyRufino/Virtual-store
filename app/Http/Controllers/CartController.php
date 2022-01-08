@@ -42,7 +42,7 @@ class CartController extends Controller
                 $data .= 'x' . $detail->quantity . ' ' . '-' . ' ' . $detail->product->name . ' ' . 'S/' . $detail->quantity * $detail->product->price . '' . $space;
             }
             $data .= $space . '* * *' . $space;
-            $data .= 'TOTAL A PAGAR: ' . $cart->total;
+            $data .= 'TOTAL A PAGAR: S/' . $cart->total;
             //$data .= '</div>';
 
 

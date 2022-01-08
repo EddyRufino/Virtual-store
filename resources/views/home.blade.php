@@ -56,9 +56,9 @@
                         <td>
                             <a href="{{ route('product.show', $detail->product->slug) }}" target="_blank">{{ $detail->product->name }}</a>
                         </td>
-                        <td>$ {{ $detail->product->price }}</td>
+                        <td>s/. {{ $detail->product->price }}</td>
                         <td>{{ $detail->quantity }}</td>
-                        <td>$ {{ $detail->quantity * $detail->product->price }}</td>
+                        <td>s/. {{ $detail->quantity * $detail->product->price }}</td>
                         <td class="td-actions">
                             <form method="post" action="{{ url('/cart') }}">
                                 {{ csrf_field() }}

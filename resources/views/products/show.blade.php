@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="description text-center">
-                <p>$ {{ $product->price }}</p>
+                <p>s/. {{ $product->price }}</p>
                 <p>{{ $product->long_description }}</p>
             </div>
 
