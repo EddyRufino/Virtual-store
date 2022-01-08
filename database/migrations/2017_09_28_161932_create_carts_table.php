@@ -22,7 +22,7 @@ class CreateCartsTable extends Migration
 
             // user_id (FK) customer
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });

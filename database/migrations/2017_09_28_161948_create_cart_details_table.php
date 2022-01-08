@@ -18,11 +18,11 @@ class CreateCartDetailsTable extends Migration
 
             // FK header
             $table->integer('cart_id')->unsigned();
-            $table->foreign('cart_id')->references('id')->on('carts');
+            $table->foreign('cart_id')->references('id')->on('carts')->onDelete('cascade');
 
             // FK product
             $table->integer('product_id')->unsigned();
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             
             $table->integer('quantity');
             $table->integer('discount')->default(0); // % int
